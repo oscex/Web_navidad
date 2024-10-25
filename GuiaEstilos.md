@@ -10,8 +10,8 @@
     - ...
 - Estructura de la pagina
     - Responsive (Dos niveles)
-    <img src="image.png">
-    <img src="image-1.png">
+    <img src="paginaPrincipal.png">
+    <img src="paginaPrincipalMovil.png">
     - Una pagina con formulario
     <img src="image-2.png">
     - Menu ha de incluir
@@ -23,7 +23,7 @@
         Noticias sobre la nacidad y sobre las actividades que se realizaran en el calasan
     - Footer
 - Logo
-    Logo original e calasanz con gorro de navidad
+    <img src="logo-calasanz-navidad.png">
 - Colores
-    Rojo, verde, blanco y azul
+    A60303, #0b541d, blanco y azul
 - Fuentes: Mountaisn of Christmas

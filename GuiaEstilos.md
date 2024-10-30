@@ -10,10 +10,10 @@
     - ...
 - Estructura de la pagina
     - Responsive (Dos niveles)
-    <img src="paginaPrincipal.png">
-    <img src="paginaPrincipalMovil.png">
+    <img src="./img/paginaPrincipal.png">
+    <img src="./img/paginaPrincipalMovil.png">
     - Una pagina con formulario
-    <img src="image-2.png">
+    <img src="./img/image-2.png">
     - Menu ha de incluir
         - Inicio
         Breve resumen sobre la organizacion de el calasanz en eventos navideños y actividades que se realizaran.
@@ -23,7 +23,7 @@
         Noticias sobre la nacidad y sobre las actividades que se realizaran en el calasan
     - Footer
 - Logo
-    <img src="logo-calasanz-navidad.png">
+    <img src="./img/logo-calasanz-navidad.png">
 - Colores
     A60303, #0b541d, blanco y azul
 - Fuentes: Mountaisn of Christmas

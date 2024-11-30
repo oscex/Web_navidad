@@ -1,0 +1,55 @@
+{
+    "contenido": [
+      {
+        "tipo": "Noticia", 
+        "titulo": "Festividad San José de Calasanz",
+        "resumen": "Las Fiestas del Colegio Calasanzson un evento muy esperado por toda la comunidad educativa. Esta festividad en honor a San José de Calasanz, fundador de las Escuelas Pías, no solo tiene un marcado carácter religioso, sino que también es una ocasión para la convivencia y el disfrute de todos los que formamos parte de esta institución educativa",
+        "contenido": "Las Fiestas del Colegio Calasanzson un evento muy esperado por toda la comunidad educativa. Esta festividad en honor a San José de Calasanz, fundador de las Escuelas Pías, no solo tiene un marcado carácter religioso, sino que también es una ocasión para la convivencia y el disfrute de todos los que formamos parte de esta institución educativa.
+
+                        A lo largo de la semana se han desarrollado diferentes celebraciones religiosas y actividades tanto dentro como fuera del aula. Entre ellas la gran castañada para los alumnos de centro infantil, infantil y primaria.  Escolatrio es el grupo de teatro de padres y madres del colegio, y con la obra “José, el maestro del Trastévere”, representó la labor de San José de Calasanz en la educación y compromiso con los más necesitados
+
+                        La jornada del viernes comenzó con una solemne celebración religiosa, en la que se rinde homenaje a San José de Calasanz. Esta eucaristía es el momento central para recordar los valores y para reflexionar sobre la labor educativa que se lleva a cabo en nuestro centro, fieles a la tradición calasancia de formación integral y compromiso con los más necesitados.
+
+                        A continuación, los alumnos de 2º de Bachillerato han realizado el pregón, un discurso ante todos los alumnos y profesores, un momento muy especial ya que los jóvenes tienen la oportunidad de expresar sus sentimientos hacia el colegio y recordar anécdotas de su infancia y trayectoria en el centro.  Han realizado una mención especial a sus compañeros del colegio Escolapios de Algemesí, centro que ha sufrido las graves consecuencias de la DANA.
+
+                        Tras el pregón, el ambiente festivo se intensifica, es tiempo de desayunar chocolatecon churros, los cabezudos corriendo por el patio, juegos y yincanas para todas las edades donde mayores y pequeños se lo pasan fenomenal.
+
+                        Para culminar el día de festividades, los alumnos de 1º Bachillerato muestran su talento artístico en el Festival.Actuaciones musicales, danzas, teatrillos llenan el escenario y animan a todo el público. Este año como “teloneros” han contado con el coro de 4º de primaria y la actuación de profesores del colegio.
+
+                        La Eucaristía familiar del domingo reúne a toda la comunidad educativa para conmemorar a nuestro patrón, San José de Calasanz, después todos disfrutamos de un ágape por cortesía del AMPA.
+
+                        En definitiva, las Fiestas del Colegio Calasanz son una celebración llena de significado, donde se mezclan la tradición religiosa, la creatividad, el compañerismo y la alegría. Es un día especial que no solo honra a San José de Calasanz, sino que también refuerza los lazos entre los miembros de la comunidad educativa y promueve el sentido de pertenencia a una gran familia calasancia.",
+        "fechaPublicacion": "25/11/2024",
+        "rutaPortada": "../img/portadaFiestaCalasanz.jpg",
+        "tieneImagen": true,
+        "rutaImagen": "../img/fotoAdicionalFiestaCalasanz.jpg",
+        "tieneVideo": false,
+        "rutaVideo": null
+      },
+      {
+        "tipo": "Entrevista",
+        "titulo": "Título de la entrevista",
+        "resumen": "Resumen de la entrevista o puntos destacados.",
+        "contenido": "Contenido completo de la entrevista.",
+        "fechaPublicacion": "2024-11-28",
+        "rutaPortada": "https://ejemplo.com/portada-entrevista.jpg",
+        "tieneImagen": true,
+        "rutaImagen": "https://ejemplo.com/entrevista.jpg",
+        "tieneVideo": true,
+        "rutaVideo": "https://ejemplo.com/entrevista.mp4"
+      },
+      {
+        "tipo": "Artículo",
+        "titulo": "Título del artículo",
+        "resumen": "Resumen breve del artículo.",
+        "contenido": "Contenido completo del artículo.",
+        "fechaPublicacion": "2024-11-27",
+        "rutaPortada": "https://ejemplo.com/portada-articulo.jpg",
+        "tieneImagen": false,
+        "rutaImagen": null,
+        "tieneVideo": false,
+        "rutaVideo": null
+      }
+    ]
+  }
+  

@@ -1,0 +1,66 @@
+  /* Espaciado general entre tarjetas */
+  #cards-container {
+    margin: 20px 0;
+  }
+
+  /* Tarjetas personalizadas */
+  .card {
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animación al pasar el cursor */
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Ampliar ligeramente al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+  }
+
+  /* Imagen en la tarjeta */
+  .card-img-top {
+    border-top-left-radius: 8px; /* Bordes redondeados superiores */
+    border-top-right-radius: 8px;
+    max-height: 200px; /* Limita la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen encaje sin deformarse */
+  }
+
+  /* Cuerpo de la tarjeta */
+  .card-body {
+    padding: 15px;
+  }
+
+  /* Títulos de las tarjetas */
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Color oscuro para el título */
+  }
+
+  /* Texto dentro de las tarjetas */
+  .card-text {
+    font-size: 1rem;
+    color: #555; /* Color ligeramente más claro */
+    margin-bottom: 15px;
+  }
+
+  /* Botones en las tarjetas */
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff; /* Color azul Bootstrap */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: translateY(-2px); /* Efecto de levantamiento */
+  }
+
+  /* Espaciado entre filas de tarjetas */
+  .row.g-4 > div {
+    margin-bottom: 20px;
+  }

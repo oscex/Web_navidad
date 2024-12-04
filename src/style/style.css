@@ -108,9 +108,6 @@ body{
         margin: auto;
         margin-top: 3rem;
     }
-    .cuerpoNoticias{
-        background-color: wheat;
-    }
     .noticias1 p{
         font-size: 25px;
         padding: 1rem;
@@ -145,7 +142,7 @@ body{
     }
     .footerNoticias{
         background-color: #0b541d;
-        position: absolute;
+        position: relative;
         bottom: 0;
         width: 100%;
         height: 5rem;
@@ -327,9 +324,6 @@ nav {
     background-color: #be3232;
     transition: all 0.3s ease;
 }
-.cuerpoNoticias{
-    background-color: white;
-}
 .body{
     height: auto;
     background-color: wheat;
@@ -396,7 +390,6 @@ nav {
 .footerNoticias{
     background-color: #0b541d;
     position: absolute;
-    bottom: 0;
     width: 100%;
     height: 5rem;
     color: white;
@@ -501,14 +494,14 @@ form input, select, textarea {
 form button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #0b541d;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 form button:hover {
-    background-color: #218838;
+    background-color: #A60303;
 }
 }
 .villancico{

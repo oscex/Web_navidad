@@ -1,66 +1,168 @@
-  /* Espaciado general entre tarjetas */
-  #cards-container {
-    margin: 20px 0;
-  }
+/* Contenedor de las tarjetas */
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
 
-  /* Tarjetas personalizadas */
-  .card {
-    border: 1px solid #ddd; /* Borde ligero */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    transition: transform 0.2s, box-shadow 0.2s; /* Animación al pasar el cursor */
-  }
+/* Estilos generales para las tarjetas */
+.card {
+  width: 30%; /* Definir un ancho de 30% para que las tarjetas no ocupen toda la pantalla */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+  opacity: 0; /* Comienza invisible */
+  transform: translateX(-30px); /* Comienza desplazada a la izquierda */
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .card:hover {
-    transform: scale(1.05); /* Ampliar ligeramente al pasar el cursor */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
-  }
+/* Animación de las tarjetas al aparecer */
+.card.show {
+  opacity: 1;
+  transform: translateX(0); /* Se mueve a su posición original */
+}
 
-  /* Imagen en la tarjeta */
-  .card-img-top {
-    border-top-left-radius: 8px; /* Bordes redondeados superiores */
-    border-top-right-radius: 8px;
-    max-height: 200px; /* Limita la altura de la imagen */
-    object-fit: cover; /* Asegura que la imagen encaje sin deformarse */
-  }
+/* Efecto hover de las tarjetas */
+.card:hover {
+  transform: translateY(-10px); /* Desplazamiento hacia arriba */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumento de sombra */
+}
 
-  /* Cuerpo de la tarjeta */
-  .card-body {
-    padding: 15px;
-  }
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-  /* Títulos de las tarjetas */
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333; /* Color oscuro para el título */
-  }
+.card-body {
+  padding: 15px;
+}
 
-  /* Texto dentro de las tarjetas */
-  .card-text {
-    font-size: 1rem;
-    color: #555; /* Color ligeramente más claro */
-    margin-bottom: 15px;
-  }
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
 
-  /* Botones en las tarjetas */
-  .btn {
-    font-size: 1rem;
-    padding: 10px 20px;
-    background-color: #007bff; /* Color azul Bootstrap */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s, transform 0.2s;
-  }
+.card p {
+  font-size: 1.5rem;
+}
 
-  .btn:hover {
-    background-color: #0056b3; /* Azul más oscuro */
-    transform: translateY(-2px); /* Efecto de levantamiento */
-  }
+/* Estilos del botón dentro de la tarjeta */
+.btn-primary {
+  background-color: #0b541d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
 
-  /* Espaciado entre filas de tarjetas */
-  .row.g-4 > div {
-    margin-bottom: 20px;
+.btn-primary:hover {
+  background-color: #0b541d;
+}
+
+/* Modal */
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Animación de desvanecimiento */
+  scroll-behavior: auto;
+}
+
+/* Mostrar el modal cuando está activo */
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%; /* El modal tiene un tamaño dinámico */
+  max-width: 900px;
+  height: auto;
+  box-sizing: border-box;
+  animation: slideIn 0.5s ease-in-out; /* Animación de entrada */
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh; /* Establecer una altura máxima para el contenido del modal */
+  overflow: hidden; /* Ocultar la barra de desplazamiento */
+}
+
+/* Animación de entrada para el modal */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
   }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo para el encabezado del modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para el pie de modal */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Estilo para el botón de cerrar */
+#closeModalBtn {
+  cursor: pointer;
+  background-color: #0b541d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+#closeModalBtn:hover {
+  background-color: #0b541d;
+}
+
+/* Asegurar que el contenido dentro del modal tenga desplazamiento sin mostrar la barra de desplazamiento */
+.modal-body {
+  padding: 20px; /* Espaciado interno */
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  max-height: 70vh; /* Establecer una altura máxima para el área del cuerpo del modal */
+  font-size: 26px;
+}
+
+/* Ocultar la barra de desplazamiento */
+.modal-body::-webkit-scrollbar {
+  width: 0; /* Desaparece la barra de desplazamiento */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Asegura que el "dedo" de la barra de desplazamiento no se vea */
+}
+

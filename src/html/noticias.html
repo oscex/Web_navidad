@@ -22,7 +22,20 @@
         <li><a href="/noticias.html">Noticias</a></li>
      </ul>
 </nav>
-<body  class="cuerpoNoticias">
+<body class="cuerpoNoticias">
+    <div id="cards-container" class="row"></div>
+    <!-- Modal -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 id="modalTitle">Detalles</h5>
+            <button id="closeModalBtn" class="btn-close">&times;</button>
+        </div>
+        <div id="modalBody" class="modal-body">
+            <!-- El contenido se cargará dinámicamente -->
+        </div>
+        </div>
+    </div>
     <script src="../scripts/script.js"></script>
 </body>
 <footer class="footerNoticias">
@@ -36,7 +49,7 @@
     </div>
     <div class="redes">
         <a href="https://www.facebook.com/CalasanzSA" target="_blank" title="Facebook">
-            <img src="./img/facebook_2504903.png" alt="Facebook">
+            <img src="../img/facebook_2504903.png" alt="Facebook">
         </a>
         <a href="https://x.com/CalasanzSA" target="_blank" title="Twitter">
             <img src="../img/twitter_5968830.png" alt="Twitter">

@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "../data/data.json"; // Ruta del archivo JSON
+  const apiUrl = "../data/data.json";
   const cardsContainer = document.getElementById("cards-container");
 
-  // Función para obtener los datos del archivo JSON
   async function fetchContenido() {
     try {
       const response = await fetch(apiUrl);
@@ -10,19 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error("Error al obtener los datos de la API");
       }
       const data = await response.json();
-      renderCards(data.contenido); // Llamar a la función para renderizar las tarjetas
+      renderCards(data.contenido);
     } catch (error) {
       console.error("Error:", error);
     }
   }
 
-  // Función para renderizar las tarjetas
   function renderCards(contenido) {
     contenido.forEach((item, index) => {
       const card = document.createElement("div");
-      card.className = "card"; // Asignar la clase 'card' para la animación
+      card.className = "card";
 
-      // Crear el contenido de cada tarjeta
       card.innerHTML = `
         <img src="${item.rutaPortada}" class="card-img-top" alt="${item.titulo}">
         <div class="card-body">
@@ -31,18 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
           <button class="btn-primary" data-id="${item.id}">Ver detalles</button>
         </div>
       `;
-      
+
       cardsContainer.appendChild(card);
 
-      // Añadir la animación de aparición de las tarjetas
       setTimeout(() => {
         card.classList.add("show");
-      }, 100 * index); // Retraso basado en el índice de la tarjeta
+      }, 100 * index);
     });
 
-    // Añadir evento para el botón "Ver detalles"
     const buttons = document.querySelectorAll(".btn-primary");
-    buttons.forEach(button => {
+    buttons.forEach((button) => {
       button.addEventListener("click", (event) => {
         const id = event.target.getAttribute("data-id");
         showDetails(id, contenido);
@@ -50,9 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Función para mostrar los detalles en el modal
   function showDetails(id, contenido) {
-    const item = contenido.find(c => c.id === parseInt(id));
+    const item = contenido.find((c) => c.id === parseInt(id));
     if(item.tipo == "Noticia" || item.tipo == "Formulario"){
       if (item) {
         const modalContent = document.getElementById("modalBody");
@@ -78,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
               console.log(item.contenido);
-        // Mostrar el modal con animación
         const modal = document.getElementById("detailsModal");
         modal.classList.add("show");
       }
@@ -113,22 +106,31 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
               console.log(item.contenido);
-        // Mostrar el modal con animación
         const modal = document.getElementById("detailsModal");
         modal.classList.add("show");
     }
+    }
   }
-  }
-  // Función para cerrar el modal
+
   function closeModal() {
     const modal = document.getElementById("detailsModal");
     modal.classList.remove("show");
   }
 
-  // Conectar el botón de cerrar en el modal
   const closeModalBtn = document.getElementById("closeModalBtn");
   closeModalBtn.addEventListener("click", closeModal);
 
-  // Cargar el contenido desde el archivo JSON
+  const modal = document.getElementById("detailsModal");
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" || event.keyCode === 27) {
+      closeModal();
+    }
+  });
+
   fetchContenido();
 });
